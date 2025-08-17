@@ -1,5 +1,6 @@
-import "../assets/hero.css"
-
+import { Button } from "@/components/ui/button";
+import "../assets/hero.css";
+import { motion } from "framer-motion";
 
 export function Hero() {
   return (
@@ -8,18 +9,36 @@ export function Hero() {
         <div className="relative z-10">
           <div className="left-side-hero flex">
             <div className="text-container max-w-xl">
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Hi, I'm <span className="">Samer</span>
-              </h1>
-              <p className="text-lg lg:text-xl text-gray-300 md:mb-8 mb-3 leading-relaxed ">
-                 A {" "}
-                <span className="font-semibold text-white">web developer. </span>
-                Inspired by the worlds of animation, where design, story, and mystery come alive.
-              </p>
+              <motion.h1
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+              >
+                Hi, I'm Samer
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-lg lg:text-xl text-gray-300 md:mb-8 mb-3 leading-relaxed "
+              >
+                A{" "}
+                <span className="font-semibold text-white">
+                  web developer.{" "}
+                </span>
+                Inspired by the worlds of animation, where design, story, and
+                mystery come alive.
+              </motion.p>
               <div className="flex gap-4">
-                <button className="bg-white text-black px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Scroll down
-                </button>
+                <motion.div
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                >
+                  <Button variant={"secondary"} className="font-bold">Scroll down</Button>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -32,6 +51,18 @@ export function Hero() {
           alt="Hero image"
           className="w-full h-full object-cover hero-image"
         />
+{/* 
+                 <motion.img
+    animate={{ scale: [1, 1.07, 1] }}
+    transition={{ 
+      duration: 13, 
+      repeat: Infinity, 
+      ease: "easeInOut" 
+    }}
+    src="/Gojo.jpg"
+    alt="Hero image"
+    className="w-full h-full object-cover hero-image"
+  /> */}
       </div>
     </section>
   );
