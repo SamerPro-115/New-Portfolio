@@ -24,6 +24,10 @@ height: 100vh;
     padding: 5rem;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 @media screen and (max-width: 992px) {
     .hero-image {
     width: 100%;

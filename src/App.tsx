@@ -1,3 +1,4 @@
+import { AboutMe } from "./sections/AboutMe"
 import { Hero } from "./sections/Hero"
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
       <Hero />
+      <AboutMe />
     </>
   )
 }

@@ -26,10 +26,9 @@ export function Hero() {
               >
                 A{" "}
                 <span className="font-semibold text-white">
-                  web developer.{" "}
+                  web developer{" "}
                 </span>
-                Inspired by the worlds of animation, where design, story, and
-                mystery come alive.
+                that loves coding and animation
               </motion.p>
               <div className="flex gap-4">
                 <motion.div
@@ -44,25 +43,20 @@ export function Hero() {
           </div>
         </div>
       </div>
+ 
+      <div className="flex-1 overflow-hidden">
 
-      <div className="flex-1">
-        <img
-          src="/Gojo.jpg"
-          alt="Hero image"
-          className="w-full h-full object-cover hero-image"
-        />
-{/* 
                  <motion.img
     animate={{ scale: [1, 1.07, 1] }}
     transition={{ 
       duration: 13, 
       repeat: Infinity, 
-      ease: "easeInOut" 
+      ease: "easeInOut",
     }}
     src="/Gojo.jpg"
     alt="Hero image"
-    className="w-full h-full object-cover hero-image"
-  /> */}
+    className="w-full h-full object-cover hero-image overflow-hidden"
+  />
       </div>
     </section>
   );
