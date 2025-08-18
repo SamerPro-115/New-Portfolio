@@ -27,6 +27,13 @@ height: 100vh;
 html{
     overflow-x: hidden;
 }
+.splash-image{
+    width: 400px;
+    transform: rotate(-35deg) translate(-50%, -50%);
+    left: 10%;
+    top: 0%;
+    opacity: 0.6;
+}
 
 @media screen and (max-width: 992px) {
     .hero-image {

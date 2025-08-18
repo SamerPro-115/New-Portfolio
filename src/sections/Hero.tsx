@@ -3,12 +3,15 @@ import "../assets/hero.css";
 import { motion } from "framer-motion";
 
 export function Hero() {
+
+  
   return (
-    <section className="min-h-screen">
-      <div className="relative hero-container">
-        <div className="relative z-10">
-          <div className="left-side-hero flex">
-            <div className="text-container max-w-xl">
+    <section className="min-h-screen  overflow-hidden">
+      <div className="relative hero-container  overflow-hidden">
+        <div className="relative z-10  overflow-hidden">
+          <img src="/splash-2.png" className="absolute splash-image" alt="splash image" />
+          <div className="left-side-hero flex  overflow-hidden">
+            <div className="text-container max-w-xl  overflow-hidden">
               <motion.h1
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -44,7 +47,7 @@ export function Hero() {
         </div>
       </div>
  
-      <div className="flex-1 overflow-hidden">
+      <div className="flex-1 relative w-full h-screen overflow-hidden">
 
                  <motion.img
     animate={{ scale: [1, 1.07, 1] }}
@@ -55,7 +58,7 @@ export function Hero() {
     }}
     src="/Gojo.jpg"
     alt="Hero image"
-    className="w-full h-full object-cover hero-image overflow-hidden"
+    className="w-full h-full object-cover hero-image -z-20"
   />
       </div>
     </section>
