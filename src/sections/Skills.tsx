@@ -1,3 +1,4 @@
+import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 
 export function Skills() {
@@ -67,6 +68,17 @@ export function Skills() {
           </div>
         </motion.div>
       </div>
+       <motion.div 
+  initial={{ width: 0, opacity: 0, marginLeft: "auto" }} 
+  whileInView={{ width: "100%", opacity: 1, marginLeft: 0 }} 
+  transition={{ duration: 1, ease: "easeInOut" }} 
+  viewport={{ once: true, amount: 0.8 }} 
+  className="flex justify-center"
+> 
+  <Separator className="bg-gray-300 mt-30 ml-auto" /> 
+</motion.div>
+
+    
     </section>
   );
 }

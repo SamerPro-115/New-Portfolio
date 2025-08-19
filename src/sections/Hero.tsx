@@ -39,7 +39,7 @@ export function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.1 }}
                 >
-                  <Button variant={"secondary"} className="font-bold">Scroll down</Button>
+                  <Button variant={"default"} className="font-bold" style={{borderRadius: "7px"}}>Scroll down</Button>
                 </motion.div>
               </div>
             </div>
