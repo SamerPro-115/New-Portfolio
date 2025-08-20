@@ -97,22 +97,16 @@
 html {
   overflow-x: hidden;
 }
-.title-word {
-  font-size: 6rem;
-  margin-left: 50px;
-  font-weight: 400;
-  position: relative;
-  background: linear-gradient(to right, #2c2a2a 0%, #FFFFFF 24%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
-.title-word::after {
-  content: "";
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(to right, #121010 0%, #FFFFFF 100%);
-  position: absolute;
-  top: 50%;
-  left: -100.5%;
+
+.works-splash-image{
+      position: absolute;
+    opacity: 0.8;
+    width: 500px;
+    top: 37%;
+    overflow: hidden;
+    filter: brightness(0.7);
+    left: 98%;
+    transform: rotate(-26deg) translate(-50%, -50%);
+    
 }

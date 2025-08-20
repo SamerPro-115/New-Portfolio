@@ -8,6 +8,8 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import React from "react";
+import { motion } from "framer-motion";
+
 
 const works = [
   {
@@ -61,15 +63,16 @@ export function Works() {
   }, [api]);
 
   return (
- <section className="min-h-screen px-4 sm:px-6 md:px-8 lg:px-16 py-8 sm:py-12">
-      <div className="mb-8 sm:mb-10 lg:mb-12 text-white max-w-4xl  ">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">My Works</h1>
-        <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl  lg:text-2xl text-gray-300 leading-relaxed max-w-2xl ">
-          Some of the projects I've worked on, simple, fun, and creative.
-        </p>
+ <motion.section
+   initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true, amount: 0.3 }} className="min-h-screen px-4 sm:px-6 md:px-8 lg:px-16 py-8 sm:py-12">
+      <div className="mb-8 text-center sm:mb-10 lg:mb-12 text-white   ">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-5 font-bold">Works</h1>
       </div>
 
-      <div className="flex justify-center items-center w-full max-w-7xl mx-auto">
+      <div className="flex justify-center items-center w-11/12 max-w-7xl mx-auto">
         <Carousel
           setApi={setApi}
           opts={{
@@ -79,11 +82,15 @@ export function Works() {
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {works.map((project, index) => (
-              <CarouselItem
+
+  <CarouselItem
                 key={index}
                 className="basis-full sm:basis-1/2 lg:basis-1/3 pl-2 md:pl-4 hover:-mt-1 sm:hover:-mt-2 transition-all duration-300"
               >
-                <div className="group relative border border-accent rounded-xl overflow-hidden h-full flex flex-col">
+                 <a    href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer">
+  <div className="group relative border border-accent rounded-xl overflow-hidden h-full flex flex-col">
                   {/* Image Container */}
                   <div className="relative overflow-hidden">
                     <img
@@ -92,16 +99,13 @@ export function Works() {
                       alt={project.name}
                     />
 
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    <div
+                      className="absolute inset-0 bg-black/50 bg-opacity-40 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     >
                       <Button variant="link" className="text-lg sm:text-xl text-white font-medium">
                         Visit Site
                       </Button>
-                    </a>
+                    </div>
                   </div>
 
                   {/* Content Container */}
@@ -110,7 +114,10 @@ export function Works() {
                     <p className="text-gray-300 leading-relaxed text-sm sm:text-base flex-1">{project.desc}</p>
                   </div>
                 </div>
+                      </a>
+              
               </CarouselItem>
+            
             ))}
           </CarouselContent>
 
@@ -133,7 +140,7 @@ export function Works() {
           />
         ))}
       </div>
-    </section>
+    </motion.section>
 
   );
 }

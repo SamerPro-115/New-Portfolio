@@ -58,7 +58,7 @@ export function Hero() {
     }}
     src="/Gojo.jpg"
     alt="Hero image"
-    className="w-full h-full object-cover hero-image -z-20"
+    className="w-full h-full object-cover hero-image z-20"
   />
       </div>
     </section>

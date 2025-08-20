@@ -27,7 +27,9 @@ export function Skills() {
 
 
   return (
-    <section className="min-h-screen bg-black py-10">
+    <section className="mb-10 bg-black py-10 relative overflow-hidden">
+        <img src="/splash-1.png" className="works-splash-image" alt="splash" />
+
       <div className="container mx-auto px-6">
 
         <motion.div

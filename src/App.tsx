@@ -4,6 +4,7 @@ import { AboutMe } from "./sections/AboutMe";
 import { Hero } from "./sections/Hero";
 import { Skills } from "./sections/Skills";
 import { Works } from "./sections/Works";
+import { Contact } from "./sections/Contact";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Skills />
 
       <Works />
+      <Contact />
     </div>
   );
 }
