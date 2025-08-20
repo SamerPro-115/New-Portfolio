@@ -67,7 +67,7 @@ export function Works() {
    initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true, amount: 0.3 }} className="min-h-screen px-4 sm:px-6 md:px-8 lg:px-16 py-8 sm:py-12">
+          viewport={{ once: true, amount: 0.3 }} className="mt-20 mb-20 px-4 sm:px-6 md:px-8 lg:px-16 py-8 sm:py-12">
       <div className="mb-8 text-center sm:mb-10 lg:mb-12 text-white   ">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-5 font-bold">Works</h1>
       </div>
@@ -95,7 +95,7 @@ export function Works() {
                   <div className="relative overflow-hidden">
                     <img
                       src={project.img || "/placeholder.svg"}
-                      className="w-full h-48 sm:h-56 md:h-64 lg:h-56 xl:h-64 object-cover brightness-90 group-hover:scale-105 transition-transform duration-300"
+                      className="filter-[grayscale(0.3)] w-full h-48 sm:h-56 md:h-64 lg:h-56 xl:h-64 object-cover brightness-90 group-hover:scale-105 transition-transform duration-300"
                       alt={project.name}
                     />
 

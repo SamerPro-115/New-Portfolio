@@ -18,7 +18,7 @@ export function Contact() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -26,37 +26,34 @@ export function Contact() {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     setShowError(false);
     setShowSuccess(false);
 
     try {
-      // Replace these with your actual EmailJS credentials
       await emailjs.send(
-        'YOUR_SERVICE_ID',     // Replace with your service ID
-        'YOUR_TEMPLATE_ID',    // Replace with your template ID
+        'service_rkv4miq',     
+        'template_t3niway',   
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          user_name: formData.name,
+          user_email: formData.email,
           message: formData.message,
-          to_name: 'Your Name',
         },
-        'YOUR_PUBLIC_KEY'      // Replace with your public key
+        '4RMueB5KLxcm6MLb9'      
       );
 
       setShowSuccess(true);
       setFormData({ name: '', email: '', message: '' });
       
-      // Hide success message after 5 seconds
+    
       setTimeout(() => setShowSuccess(false), 5000);
       
     } catch (error) {
       console.error('EmailJS Error:', error);
       setShowError(true);
       
-      // Hide error message after 5 seconds
       setTimeout(() => setShowError(false), 5000);
     } finally {
       setIsLoading(false);
@@ -77,13 +74,13 @@ export function Contact() {
         </div>
 
         {/* Contact Form Card */}
-        <Card className="bg-gray-900/50 border-gray-700/50 backdrop-blur-sm">
+        <Card className="bg-black border-2 border-accent backdrop-blur-sm">
           <CardHeader className="text-center pb-8">
-            <CardTitle className="text-2xl md:text-3xl text-white flex items-center justify-center gap-3">
+            <CardTitle className="text-xl md:text-3xl text-white flex items-center justify-center gap-3">
               <Mail className="w-8 h-8" />
               Send Me a Message
             </CardTitle>
-            <CardDescription className="text-gray-400 text-lg">
+            <CardDescription className=" text-lg"  style={{color: "rgb(187, 187, 187)"}}>
               I'll get back to you as soon as possible
             </CardDescription>
           </CardHeader>
@@ -123,7 +120,7 @@ export function Contact() {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="bg-gray-800/50 border-gray-600/50 text-white placeholder:text-gray-400 focus:border-white focus:ring-white/20 h-12"
+                  className="bg-primary-foreground border-gray-600/50 text-white  focus:border-white focus:ring-white/20 h-12"
                 />
               </div>
 
@@ -141,7 +138,7 @@ export function Contact() {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="bg-gray-800/50 border-gray-600/50 text-white placeholder:text-gray-400 focus:border-white focus:ring-white/20 h-12"
+                  className="bg-primary-foreground border-gray-600/50 text-white  focus:border-white focus:ring-white/20 h-12"
                 />
               </div>
 
@@ -159,7 +156,7 @@ export function Contact() {
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="bg-gray-800/50 border-gray-600/50 text-white placeholder:text-gray-400 focus:border-white focus:ring-white/20 resize-none"
+                  className="bg-primary-foreground border-gray-600/50 text-white  focus:border-white focus:ring-white/20 resize-none"
                 />
               </div>
 
@@ -187,13 +184,13 @@ export function Contact() {
 
         {/* Contact Info */}
         <div className="text-center mt-12">
-          <p className="text-gray-400 text-sm">
+          <p className="text-sm" style={{color: "rgb(187, 187, 187)"}}>
             Prefer email? Reach me directly at{' '}
             <a 
-              href="mailto:your.email@example.com" 
+              href="mailto:newsamer123@gmail.com" 
               className="text-white hover:text-gray-200 underline underline-offset-4 transition-colors"
             >
-              your.email@example.com
+              newsamer123@gmail.com
             </a>
           </p>
         </div>

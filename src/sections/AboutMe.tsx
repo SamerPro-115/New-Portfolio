@@ -37,6 +37,7 @@ export function AboutMe() {
     <div
       className="min-h-screen flex lg:flex-row flex-col justify-center"
       onClick={handleContainerClick}
+      id="about-me"
     >
       <div className="text flex flex-1 bg-black  justify-center items-center">
         <div className="flex flex-col w-2/3 lg:mt-0 lg:mb-0 sm:mt-30 sm:mb-30 mt-10 mb-10">
