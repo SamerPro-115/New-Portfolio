@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 
@@ -6,38 +5,50 @@ import { motion } from 'framer-motion';
 const Journy = () => {
   const experiences = [
     {
-      year: '2024',
-      title: 'Full Stack Developer',
-      company: 'Tech Corp',
-      description: 'Led development of React applications with modern frameworks and best practices',
-      tech: ['React', 'Node.js', 'MongoDB'],
+      year: '2025',
+      title: 'Trader\'s Tools – Browser Ext..',
+      company: 'Freelance',
+      description: 'Built a browser extension using React.js to assist traders with handy tools.',
+      tech: ['React', 'Chrome-store'],
       panelStyle: 'border-4 border-white bg-black shadow-[0_0_0_4px_black,0_0_0_8px_white]',
-      speech: "The journey reaches its peak..."
     },
     {
-      year: '2023', 
-      title: 'Frontend Developer',
-      company: 'StartupXYZ',
-      description: 'Built responsive web applications focusing on user experience and performance',
-      tech: ['Vue.js', 'TypeScript', 'Tailwind'],
+      year: '2025', 
+      title: 'Wakan - Portfolio',
+      company: 'Wakan',
+      description: 'Customized design templates to match brand identity. Implemented multilingual support (English and Arabic) using i18next.',
+      tech: ['HTML', 'CSS', 'i18next'],
       panelStyle: 'border-4 border-white bg-gradient-to-br from-gray-900 to-black shadow-[0_0_0_4px_black,0_0_0_8px_white]',
-      speech: "Power grows with each challenge..."
     },
     {
-      year: '2022',
-      title: 'Junior Developer', 
-      company: 'Code Academy',
-      description: 'Started my coding journey learning fundamentals and building first projects',
-      tech: ['JavaScript', 'HTML', 'CSS'],
+      year: '2024 - 2025',
+      title: 'Mohtaway', 
+      company: 'Freelance',
+      description: 'Built a content-sharing platform with subscription features.',
+      tech: ['JavaScript', 'Node.js', 'MongoDB', "GCP"],
       panelStyle: 'border-4 border-white bg-gradient-to-br from-black to-gray-800 shadow-[0_0_0_4px_black,0_0_0_8px_white]',
-      speech: "The origin story begins..."
+    },
+     {
+      year: '2024',
+      title: 'FastFlow - Portfolio', 
+      company: 'FastFlow',
+      description: 'Bulit the portfolio from scratch with modern animations.',
+      tech: ['JavaScript', 'Jquery', 'Bootstrap', "CSS"],
+      panelStyle: 'border-4 border-white bg-gradient-to-br from-black to-gray-800 shadow-[0_0_0_4px_black,0_0_0_8px_white]',
+    },
+     {
+      year: '2023 - present',
+      title: 'LearningCorner', 
+      company: 'Freelance',
+      description: '- Built and designed a course-based learning site for university students. I am still working as a technical support.',
+      tech: ['Bootstrap', 'JavaScript', 'CSS'],
+      panelStyle: 'border-4 border-white bg-gradient-to-br from-black to-gray-800 shadow-[0_0_0_4px_black,0_0_0_8px_white]',
     }
   ];
 
   return (
     
     <div className="min-h-screen bg-black py-10 md:py-20 relative overflow-hidden">
-      {/* Manga-style background effects */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-10 w-32 h-32 border-2 border-white transform rotate-45"></div>
         <div className="absolute bottom-40 right-20 w-24 h-24 border-2 border-white transform -rotate-12"></div>
@@ -46,7 +57,6 @@ const Journy = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Manga-style header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +64,6 @@ const Journy = () => {
           viewport={{ once: true }}
           className="text-center mb-16 md:mb-24 relative"
         >
-          {/* Speed lines background */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(12)].map((_, i) => (
               <motion.div
@@ -86,7 +95,6 @@ const Journy = () => {
               <div className="absolute -inset-2 bg-white/10 transform skew-x-2 -z-10"></div>
             </h2>
             
-            {/* Speech bubble */}
             <div className="relative bg-white text-black p-4 mt-6 font-bold text-lg
                           after:content-[''] after:absolute after:top-full after:left-1/2 
                           after:transform after:-translate-x-1/2 after:border-8
@@ -97,10 +105,8 @@ const Journy = () => {
         </motion.div>
         
         <div className="relative">
-          {/* Dramatic center line with manga effects */}
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-white hidden lg:block
                         shadow-[0_0_20px_rgba(255,255,255,0.8)]">
-            {/* Power aura effects along the line */}
             {[...Array(5)].map((_, i) => (
               <motion.div
                 key={i}
@@ -120,7 +126,6 @@ const Journy = () => {
             ))}
           </div>
           
-          {/* Mobile timeline */}
           <div className="absolute left-8 top-0 h-full w-1 bg-white lg:hidden shadow-[0_0_10px_rgba(255,255,255,0.6)]"></div>
           
           {experiences.map((exp, index) => (
@@ -141,7 +146,6 @@ const Journy = () => {
                   : 'lg:flex-row-reverse flex-row'
                 }`}
             >
-              {/* Manga panel card */}
               <div className={`
                 w-full lg:w-5/12 ml-16 lg:ml-0
                 ${index % 2 === 0 
@@ -157,7 +161,6 @@ const Journy = () => {
                     boxShadow: "0 0 0 4px black, 0 0 0 8px white, 0 20px 40px rgba(0,0,0,0.8)"
                   }}
                 >
-                  {/* Manga-style action lines on hover */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {[...Array(8)].map((_, i) => (
                       <div
@@ -175,7 +178,6 @@ const Journy = () => {
                   </div>
                   
                   <div className="relative z-10">
-                    {/* Speech bubble for year */}
                     <div className="mb-4">
                       <motion.div 
                         whileHover={{ scale: 1.1 }}
@@ -188,13 +190,11 @@ const Journy = () => {
                       </motion.div>
                     </div>
                     
-                    {/* Dramatic title with manga effects */}
-                    <h3 className="text-white text-2xl sm:text-3xl lg:text-4xl font-black mb-3 
-                                 tracking-wider uppercase relative">
+                    <h3 className="text-white text-xl sm:text-3xl font-black mb-3 
+                                 tracking-wider relative">
                       <span className="relative z-10">{exp.title}</span>
                       <div className="absolute -inset-2 bg-white/5 transform -skew-x-2 -z-10"></div>
                       
-                      {/* Power aura effect */}
                       <motion.div
                         animate={{ 
                           scale: [1, 1.1, 1],
@@ -213,7 +213,6 @@ const Journy = () => {
                       {exp.company}
                     </p>
                     
-                    {/* Thought bubble for description */}
                     <div className="bg-gray-200 text-black p-4 mb-4 relative font-medium text-base
                                   border-2 border-black
                                   before:content-[''] before:absolute before:bottom-full before:left-6
@@ -221,21 +220,14 @@ const Journy = () => {
                                   after:content-[''] after:absolute after:bottom-full after:left-6
                                   after:border-10 after:border-transparent after:border-b-black
                                   after:transform after:translate-y-1">
-                      <p className="italic">"{exp.description}"</p>
+                      <p className="italic">{exp.description}</p>
                     </div>
                     
-                    {/* Speech bubble for the dramatic quote */}
-                    <div className="bg-white text-black p-3 mb-4 font-bold text-center
-                                  relative rounded-lg
-                                  after:content-[''] after:absolute after:top-full after:right-4
-                                  after:border-6 after:border-transparent after:border-t-white">
-                      {exp.speech}
-                    </div>
+          
                     
-                    {/* Power level indicators (tech stack) */}
                     <div className="border-2 border-white p-3 bg-black/80">
                       <p className="text-white font-bold mb-2 text-sm uppercase tracking-widest">
-                        ABILITIES UNLOCKED:
+                        Tools:
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {exp.tech.map((tech, techIndex) => (
@@ -264,7 +256,6 @@ const Journy = () => {
                 </motion.div>
               </div>
               
-              {/* Dramatic timeline dot with power effects */}
               <motion.div 
                 className="absolute w-8 h-8 lg:w-12 lg:h-12 bg-white border-4 border-black z-20
                           left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 
@@ -282,7 +273,6 @@ const Journy = () => {
                   boxShadow: "0 0 30px rgba(255,255,255,1)"
                 }}
               >
-                {/* Inner energy core */}
                 <motion.div 
                   animate={{ 
                     scale: [0.8, 1.2, 0.8],
@@ -297,21 +287,18 @@ const Journy = () => {
                 />
               </motion.div>
               
-              {/* Connection line to timeline */}
               <div className="absolute left-8 w-4 h-1 bg-white lg:hidden top-1/2 transform -translate-y-1/2
                             shadow-[0_0_10px_rgba(255,255,255,0.6)]"></div>
             </motion.div>
           ))}
         </div>
 
-        {/* Epic finale call to action */}
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.8 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, type: "spring", stiffness: 100 }}
           className="text-center mt-20 md:mt-24 relative"
         >
-          {/* Dramatic background burst */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(16)].map((_, i) => (
               <motion.div
@@ -338,6 +325,12 @@ const Journy = () => {
             </p>
             
             <motion.button
+               onClick={() => {
+      document.getElementById("contact")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }}
               whileHover={{ 
                 scale: 1.1,
                 boxShadow: "0 0 0 4px black, 0 0 0 8px white, 0 0 30px rgba(255,255,255,0.8)"

@@ -61,9 +61,9 @@ export function Contact() {
   };
 
   return (
-    <section className="min-h-screen bg-black text-white relative overflow-hidden py-20">
+    <section className="min-h-screen bg-black text-white relative overflow-hidden py-20" >d
 
-<div className="absolute inset-0 overflow-hidden opacity-10">
+<div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none" >
         <div className="absolute inset-0" style={{
           backgroundImage: `
             repeating-linear-gradient(45deg, transparent, transparent 100px, white 100px, white 101px),
@@ -72,8 +72,7 @@ export function Contact() {
         }}></div>
       </div>
 
-      {/* Floating geometric shapes */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
+      <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
         {[...Array(8)].map((_, i) => (
           <div
             key={i}
@@ -90,8 +89,7 @@ export function Contact() {
         ))}
       </div>
       
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
+      <div className="max-w-4xl mx-auto" id='contact'>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Get In Touch
@@ -101,7 +99,6 @@ export function Contact() {
           </p>
         </div>
 
-        {/* Contact Form Card */}
         <Card className="bg-black border-2 border-accent backdrop-blur-sm">
           <CardHeader className="text-center pb-8">
             <CardTitle className="text-xl md:text-3xl text-white flex items-center justify-center gap-3">
@@ -134,7 +131,6 @@ export function Contact() {
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name Field */}
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-white text-base font-medium flex items-center gap-2">
                   <User className="w-4 h-4" />
@@ -152,7 +148,6 @@ export function Contact() {
                 />
               </div>
 
-              {/* Email Field */}
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-white text-base font-medium flex items-center gap-2">
                   <Mail className="w-4 h-4" />
@@ -170,7 +165,6 @@ export function Contact() {
                 />
               </div>
 
-              {/* Message Field */}
               <div className="space-y-2">
                 <Label htmlFor="message" className="text-white text-base font-medium flex items-center gap-2">
                   <MessageSquare className="w-4 h-4" />
@@ -188,7 +182,6 @@ export function Contact() {
                 />
               </div>
 
-              {/* Submit Button */}
               <Button
                 type="submit"
                 disabled={isLoading}
@@ -210,13 +203,12 @@ export function Contact() {
           </CardContent>
         </Card>
 
-        {/* Contact Info */}
         <div className="text-center mt-12">
           <p className="text-sm" style={{color: "rgb(187, 187, 187)"}}>
             Prefer email? Reach me directly at{' '}
             <a 
               href="mailto:newsamer123@gmail.com" 
-              className="text-white hover:text-gray-200 underline underline-offset-4 transition-colors"
+             className="text-white hover:text-gray-200 underline underline-offset-4 transition-colors cursor-pointer"
             >
               newsamer123@gmail.com
             </a>

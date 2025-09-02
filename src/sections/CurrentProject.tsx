@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -12,47 +12,47 @@ type TProject = {
 
 
 const currentProject = {
-  title: "E-Commerce Platform",
-  description: "Building a sophisticated online marketplace with modern React architecture, featuring real-time inventory management, seamless payment integration, and an elegant admin dashboard. The platform emphasizes user experience with responsive design and smooth interactions.",
-  fullDescription: "This comprehensive e-commerce solution represents months of careful planning and development. Built with scalability in mind, it features a robust backend API, real-time data synchronization, advanced search capabilities, and a complete administrative suite for managing products, orders, and analytics.",
-  tech: ["React", "TypeScript", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-  status: "In Active Development",
+  title: "Connect system",
+  description: "Developing a human resource management system that streamlines employee, manager, and team operations. The platform focuses on simplifying organizational workflows through intuitive design and reliable data handling.",
+  fullDescription: "Connect HRMS is designed to help organizations efficiently manage their workforce. It provides tools for creating and managing teams, assigning managers, and tracking employees with real-time data updates. The system is built with scalability in mind, featuring a robust backend, responsive frontend with modern React architecture, and optimized data synchronization to ensure accuracy across all modules. The goal is to reduce administrative overhead while improving clarity and efficiency in HR operations.",
+  tech: ["React", "TypeScript", "Tailwind CSS", "Shadcn/ui", "Node.js", "GCP", "Socket.io", "MongoDB", "Git/Github", ],
+  status: "On a break from work, focusing on my studies.",
   progress: 30,
   images: [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop&auto=format",
-      title: "Homepage Design",
+      url: "/currentWork/1.png",
+      title: "Login Pgae Design",
       description: "Clean, modern landing page with hero section and featured products"
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&auto=format",
-      title: "Product Catalog",
+      url: "/currentWork/2.png",
+      title: "Employees Ar",
       description: "Responsive grid layout with advanced filtering and search"
     },
     {
       id: 3,
-      url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format",
-      title: "Admin Dashboard",
+      url: "/currentWork/3.png",
+      title: "Managers",
       description: "Comprehensive analytics and management interface"
     },
     {
       id: 4,
-      url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format",
-      title: "Analytics View",
+      url: "/currentWork/4.png",
+      title: "Admin Logs",
       description: "Real-time sales data and performance metrics"
     },
     {
       id: 5,
-      url: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop&auto=format",
-      title: "Mobile Experience",
+      url: "/currentWork/5.png",
+      title: "Manage Teams",
       description: "Fully responsive design optimized for mobile devices"
     },
     {
       id: 6,
-      url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop&auto=format",
-      title: "Payment Integration",
+      url: "/currentWork/6.png",
+      title: "Create Team Ar",
       description: "Secure checkout process with multiple payment options"
     }
   ]
@@ -66,7 +66,7 @@ export default function CurrentProject() {
     <section className="min-h-screen bg-black py-20 relative overflow-hidden">
       {/* Subtle background patterns */}
       <div className="absolute inset-0 overflow-hidden opacity-5">
-        {/* Grid pattern */}
+       
         <div 
           className="absolute inset-0"
           style={{
@@ -79,7 +79,6 @@ export default function CurrentProject() {
 
         {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-30">
-        {/* Energy rings */}
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={`ring-${i}`}
@@ -127,7 +126,6 @@ export default function CurrentProject() {
         ))}
       </div>
 
-      {/* Subtle grid pattern (keeping original) */}
       <div className="absolute inset-0 overflow-hidden opacity-5">
         <div 
           className="absolute inset-0"
@@ -149,9 +147,7 @@ export default function CurrentProject() {
           viewport={{ once: true }}
           className="text-center mb-16 relative"
         >
-          {/* Speed lines beside title */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {/* Left side lines */}
             {[...Array(5)].map((_, i) => (
               <motion.div
                 key={`left-${i}`}
@@ -168,7 +164,6 @@ export default function CurrentProject() {
               />
             ))}
             
-            {/* Right side lines */}
             {[...Array(5)].map((_, i) => (
               <motion.div
                 key={`right-${i}`}
@@ -196,7 +191,6 @@ export default function CurrentProject() {
             CURRENT WORK
           </motion.h2>
           
-          {/* Elegant separator */}
           <motion.div 
             className="flex items-center justify-center space-x-3 mb-6 relative z-10"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -211,7 +205,6 @@ export default function CurrentProject() {
           </motion.div>
         </motion.div>
 
-        {/* Project overview */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -237,14 +230,12 @@ export default function CurrentProject() {
             {currentProject.description}
           </motion.p>
           
-          {/* Tech stack and status */}
           <motion.div 
-            className="flex flex-col md:flex-row items-center justify-center gap-8"
+            className="flex flex-col items-center justify-center gap-3"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            {/* Tech stack */}
             <div className="flex flex-wrap justify-center gap-2">
               {currentProject.tech.map((tech) => (
                 <span 
@@ -257,14 +248,9 @@ export default function CurrentProject() {
               ))}
             </div>
             
-            {/* Status */}
-            <div className="flex items-center space-x-4">
-              <span className="text-gray-400 text-sm">Status:</span>
-              <span className="text-white font-light">{currentProject.status}</span>
-            </div>
+            
           </motion.div>
           
-          {/* Progress */}
           <motion.div 
             className="max-w-md mx-auto mt-8"
             initial={{ opacity: 0 }}
@@ -272,7 +258,7 @@ export default function CurrentProject() {
             transition={{ delay: 0.9 }}
           >
             <div className="flex justify-between items-center mb-2">
-              <span className="text-sm text-gray-500 font-light">Development Progress</span>
+              <span className="text-sm text-muted-foreground">Development Progress</span>
               <span className="text-sm text-gray-300">{currentProject.progress}%</span>
             </div>
             <div className="bg-gray-800 h-1 relative overflow-hidden">
@@ -283,10 +269,13 @@ export default function CurrentProject() {
                 transition={{ duration: 2, delay: 1 }}
               />
             </div>
+            <div className="flex space-x-1 mt-2">
+              <span className="text-muted-foreground text-xs">Status:</span>
+              <span className="text-muted-foreground text-xs">{currentProject.status}</span>
+            </div>
           </motion.div>
         </motion.div>
 
-        {/* Project gallery */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -320,10 +309,9 @@ export default function CurrentProject() {
                 onClick={() => setSelectedImage(image)}
                 whileHover={{ y: -8, scale: 1.02 }}
               >
-                <div className="bg-black border border-gray-800 hover:border-white/30 
+                <div className="bg-black border border-white/20 h-full  hover:border-white/30 
                               transition-all duration-500 overflow-hidden relative">
                   
-                  {/* Image */}
                   <div className="relative h-48 overflow-hidden">
                     <motion.img
                       src={image.url}
@@ -333,7 +321,6 @@ export default function CurrentProject() {
                       whileHover={{ scale: 1.05 }}
                     />
                     
-                    {/* Overlay */}
                     <motion.div
                       className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100
                                flex items-center justify-center"
@@ -345,7 +332,6 @@ export default function CurrentProject() {
                     </motion.div>
                   </div>
                   
-                  {/* Description */}
                   <div className="p-4">
                     <h5 className="text-white font-light text-lg mb-2 font-serif">
                       {image.title}
@@ -355,7 +341,6 @@ export default function CurrentProject() {
                     </p>
                   </div>
                   
-                  {/* Corner accents */}
                   <div className="absolute top-0 right-0 w-3 h-3 border-r border-t border-white/20 
                                 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute bottom-0 left-0 w-3 h-3 border-l border-b border-white/20 
@@ -366,7 +351,6 @@ export default function CurrentProject() {
           </div>
         </motion.div>
 
-        {/* Image modal */}
         <AnimatePresence>
           {selectedImage && (
             <motion.div
@@ -384,13 +368,11 @@ export default function CurrentProject() {
                 className="bg-black border border-white/30 max-w-4xl w-full relative"
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* Decorative corners */}
                 <div className="absolute top-0 left-0 w-6 h-6 border-l-2 border-t-2 border-white/40"></div>
                 <div className="absolute top-0 right-0 w-6 h-6 border-r-2 border-t-2 border-white/40"></div>
                 <div className="absolute bottom-0 left-0 w-6 h-6 border-l-2 border-b-2 border-white/40"></div>
                 <div className="absolute bottom-0 right-0 w-6 h-6 border-r-2 border-b-2 border-white/40"></div>
                 
-                {/* Close button */}
                 <motion.button
                   className="absolute top-4 right-4 z-10 text-white/60 hover:text-white text-3xl font-light"
                   whileHover={{ scale: 1.1 }}
@@ -401,15 +383,14 @@ export default function CurrentProject() {
                 </motion.button>
                 
                 {/* Large image */}
-                <div className="h-96 relative overflow-hidden">
+                <div className="h-full relative overflow-hidden">
                   <img
                     src={selectedImage.url}
                     alt={selectedImage.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 
-                {/* Image details */}
                 <div className="p-8">
                   <h3 className="text-white text-2xl font-light font-serif mb-4 tracking-wide">
                     {selectedImage.title}

@@ -16,7 +16,7 @@ const works = [
     img: "/works/Mohtaway.png",
     desc: "Content-sharing platform with subscription features. You can upload your video/book/podcast and sell it at Mohtaway marketplace.",
     tech: ["JavaScript", "Node.js", "MongoDB", "GCP"],
-    year: "2025"
+    year: "2024 - 2025"
   },
 
   {
@@ -34,7 +34,7 @@ const works = [
     img: "/works/ex.png",
     desc: "A React-based Chrome extension for traders with simple tools like a calculator and to-do-list, etc.",
     tech: ["React", "Chrome API", "JavaScript"],
-    year: "2024"
+    year: "2025"
   },
  
   {
@@ -43,7 +43,7 @@ const works = [
     img: "/works/learncorner.png",
     desc: "A learning platform for students to connect with their own private tutor. With customizing Msaaq platform pages using embedded CSS and HTML to provide a better UI.",
     tech: ["HTML", "CSS", "Custom Integration"],
-    year: "2023"
+    year: "2023 - present"
   },
 ];
 
@@ -81,7 +81,6 @@ export function Works() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Header */}
         <div className="text-center mb-20">
           <div className="relative inline-block">
             <div className="absolute -inset-6 bg-white transform -rotate-2 opacity-10"></div>
@@ -95,7 +94,6 @@ export function Works() {
           </p>
         </div>
 
-        {/* Works Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {works.map((work, index) => (
             <div
@@ -108,20 +106,15 @@ export function Works() {
                 animation: `slideInUp 0.8s ease-out forwards`
               }}
             >
-              {/* Architectural Card Design */}
               <div className="relative h-96 bg-black border-4 border-white overflow-hidden group-hover:border-gray-300 transition-all duration-500">
                 
-                {/* Diagonal Split Layout */}
                 <div className="absolute inset-0 transform -skew-x-12 origin-bottom-left bg-white transition-transform duration-700 group-hover:skew-x-0"></div>
                 <div className="absolute inset-0 bg-black transform skew-x-12 origin-top-right transition-transform duration-700 group-hover:skew-x-0"></div>
                 
-                {/* Content Container */}
                 <div className="relative z-10 h-full flex">
                   
-                  {/* Left Side - Text Content */}
                   <div className="w-1/2 p-8 flex flex-col justify-between text-black relative z-20">
                     
-                    {/* Project Number - Top Left */}
                     <div className="flex justify-between items-start">
                       <div className="w-16 h-16 bg-black text-white flex items-center justify-center text-xl font-bold">
                         {String(index + 1).padStart(2, '0')}
@@ -132,13 +125,11 @@ export function Works() {
                       </div>
                     </div>
                     
-                    {/* Project Title */}
                     <div>
                       <h3 className="text-3xl font-bold tracking-tighter mb-4 transform transition-transform duration-300 group-hover:translate-x-2">
                         {work.name}
                       </h3>
                       
-                      {/* Tech Stack as vertical list */}
                       <div className="space-y-1">
                         {work.tech.slice(0, 3).map((tech) => (
                           <div key={tech} className="text-xs font-bold tracking-widest opacity-70">
@@ -148,14 +139,12 @@ export function Works() {
                       </div>
                     </div>
                     
-                    {/* Bottom accent */}
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-px bg-black"></div>
                       <div className="text-xs tracking-widest font-bold">PROJECT</div>
                     </div>
                   </div>
                   
-                  {/* Right Side - Image */}
                   <div className="w-1/2 relative overflow-hidden">
                     <img
                       src={work.img}
@@ -163,7 +152,6 @@ export function Works() {
                       className="w-full h-full object-cover filter filter-[grayscale(0.3)] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
                     />
                     
-                    {/* Image overlay with project details */}
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                       <div className="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                         <div className="text-sm tracking-widest mb-2">VIEW PROJECT</div>
@@ -173,7 +161,6 @@ export function Works() {
                   </div>
                 </div>
                 
-                {/* Hover state - Description overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-white text-black p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-30">
                   <p className="text-sm leading-relaxed mb-4">
                     {work.desc}
@@ -190,12 +177,10 @@ export function Works() {
                   </a>
                 </div>
                 
-                {/* Corner accents */}
                 <div className="absolute top-0 left-0 w-8 h-8 border-l-4 border-t-4 border-white opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-r-4 border-b-4 border-white opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-white border-4 border-black transform rotate-45 opacity-0 group-hover:opacity-100 group-hover:rotate-90 transition-all duration-500"></div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-black border-2 border-white opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
             </div>
@@ -210,7 +195,6 @@ export function Works() {
               className="bg-zinc-950 border border-zinc-800 max-w-5xl w-full max-h-[90vh] overflow-auto shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Modal Header */}
               <div className="border-b border-zinc-800 p-8 flex justify-between items-start bg-gradient-to-r from-zinc-950 to-zinc-900">
                 <div>
                   <h3 className="text-4xl font-bold tracking-tight mb-3">{works[selectedWork].name}</h3>
@@ -227,10 +211,8 @@ export function Works() {
                 </button>
               </div>
               
-              {/* Modal Content */}
               <div className="p-8">
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-                  {/* Image - Takes more space */}
                   <div className="lg:col-span-3">
                     <div className="relative">
                       <img
@@ -242,7 +224,6 @@ export function Works() {
                     </div>
                   </div>
                   
-                  {/* Details - Cleaner layout */}
                   <div className="lg:col-span-2 space-y-8">
                     <div>
                       <h4 className="text-lg font-bold mb-4 tracking-wide text-white/90">OVERVIEW</h4>

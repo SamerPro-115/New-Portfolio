@@ -67,7 +67,7 @@ export function AboutMe() {
             viewport={{ once: false, amount: 0.3 }}
             className="text-lg lg:text-xl text-gray-300"
           >
-            I'm a university student in the Faculty of IT. Outside of coding, I have passions that inspire me and keep life exciting{' '}
+            I'm a third-year university student in the Faculty of IT. Outside of coding, I have passions that inspire me and keep life exciting{' '}
             {isMid ? (
               <ArrowDown className="inline" />
             ) : (
