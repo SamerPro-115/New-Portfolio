@@ -1,16 +1,21 @@
 import { motion } from "framer-motion";
-import { Separator } from "./components/ui/separator";
 import { AboutMe } from "./sections/AboutMe";
 import { Hero } from "./sections/Hero";
 import { Skills } from "./sections/Skills";
 import { Works } from "./sections/Works";
 import { Contact } from "./sections/Contact";
+import  Social  from "./components/social";
+import { Toaster } from "sonner";
+import  Journy  from "./sections/Journy";
+import CurrentProject from "./sections/CurrentProject";
 
 function App() {
   return (
     <div className="bg-black">
+      <Social />
       <Hero />
       <AboutMe />
+    
       <motion.div
         initial={{ width: 0, opacity: 0 }}
         whileInView={{ width: "100%", opacity: 1 }}
@@ -18,12 +23,22 @@ function App() {
         viewport={{ once: true, amount: 0.8 }}
         className="flex justify-center mt-32"
       >
-        <Separator className="bg-gray-300" />
       </motion.div>
+              <Journy />
+
+
+
+
       <Skills />
 
+      
+
       <Works />
+      <CurrentProject />
       <Contact />
+
+        <Toaster position="top-center" />
+
     </div>
   );
 }

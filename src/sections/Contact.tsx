@@ -61,7 +61,35 @@ export function Contact() {
   };
 
   return (
-    <section className="min-h-screen py-16 px-4 lg:px-8 bg-black">
+    <section className="min-h-screen bg-black text-white relative overflow-hidden py-20">
+
+<div className="absolute inset-0 overflow-hidden opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            repeating-linear-gradient(45deg, transparent, transparent 100px, white 100px, white 101px),
+            repeating-linear-gradient(-45deg, transparent, transparent 100px, white 100px, white 101px)
+          `,
+        }}></div>
+      </div>
+
+      {/* Floating geometric shapes */}
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute border border-white"
+            style={{
+              width: `${20 + i * 15}px`,
+              height: `${20 + i * 15}px`,
+              top: `${5 + i * 12}%`,
+              left: `${3 + i * 11}%`,
+              animation: `contactFloat ${5 + i * 0.5}s ease-in-out infinite alternate`,
+              animationDelay: `${i * 0.3}s`
+            }}
+          />
+        ))}
+      </div>
+      
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
