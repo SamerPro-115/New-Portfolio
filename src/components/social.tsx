@@ -76,30 +76,36 @@ const Social = () => {
       icon: DiscordIcon
     }
   ];
+return (
+  <div
+    className="
+      fixed 
+      top-2 left-1/2 -translate-x-1/2 flex-row gap-2
+      sm:top-1/2 sm:left-4 sm:-translate-x-0 sm:-translate-y-1/2 sm:flex-col sm:gap-3
+      z-50 flex
+    "
+  >
+    {socialLinks.map(({ name, href, icon: Icon }) => (
+      <a
+        key={name}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group p-1.5 sm:p-3 rounded-full bg-white border border-black sm:border-2
+                   hover:bg-black hover:border-white
+                   transition-all duration-300 ease-out
+                   transform hover:scale-110 shadow-md sm:shadow-lg hover:shadow-xl"
+        aria-label={name}
+      >
+        <Icon
+          size={20}
+          className="sm:w-5 sm:h-5 text-black group-hover:text-white transition-colors duration-300"
+        />
+      </a>
+    ))}
+  </div>
+);
 
-  return (
-    <div className="fixed left-1 sm:left-4 top-1/2 -translate-y-1/2 z-50 
-                    flex flex-col gap-1 sm:gap-3">
-      {socialLinks.map(({ name, href, icon: Icon }) => (
-        <a
-          key={name}
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group p-1.5 sm:p-3 rounded-full bg-white border border-black sm:border-2
-                     hover:bg-black hover:border-white
-                     transition-all duration-300 ease-out
-                     transform hover:scale-110 shadow-md sm:shadow-lg hover:shadow-xl"
-          aria-label={name}
-        >
-          <Icon 
-            size={20} 
-            className="sm:w-5 sm:h-5 text-black group-hover:text-white transition-colors duration-300" 
-          />
-        </a>
-      ))}
-    </div>
-  );
 };
 
 

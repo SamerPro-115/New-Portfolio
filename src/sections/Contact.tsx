@@ -61,7 +61,7 @@ export function Contact() {
   };
 
   return (
-    <section className="min-h-screen bg-black text-white relative overflow-hidden py-20" >d
+    <section className="min-h-screen bg-black text-white relative overflow-hidden py-20" >
 
 <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none" >
         <div className="absolute inset-0" style={{

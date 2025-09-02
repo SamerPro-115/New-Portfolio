@@ -51,9 +51,9 @@ export function Works() {
   const [selectedWork, setSelectedWork] = useState<number | null>(null);
 
   return (
-    <section className="min-h-screen bg-black text-white relative overflow-hidden py-20">
+    <section className="min-h-screen bg-black text-white relative overflow-hidden py-20 ">
       {/* Background Grid Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 ">
         <div className="absolute inset-0" style={{
           backgroundImage: `
             repeating-linear-gradient(0deg, transparent, transparent 50px, white 50px, white 51px),
@@ -63,7 +63,7 @@ export function Works() {
       </div>
 
       {/* Floating geometric shapes */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
+      <div className="absolute inset-0 overflow-hidden opacity-10 ">
         {[...Array(6)].map((_, i) => (
           <div
             key={i}
@@ -98,7 +98,7 @@ export function Works() {
           {works.map((work, index) => (
             <div
               key={work.name}
-              className="group relative cursor-pointer"
+              className="group relative cursor-pointer "
           
               onClick={() => setSelectedWork(index)}
               style={{

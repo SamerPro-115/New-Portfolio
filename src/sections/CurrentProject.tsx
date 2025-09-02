@@ -23,37 +23,37 @@ const currentProject = {
       id: 1,
       url: "/currentWork/1.png",
       title: "Login Pgae Design",
-      description: "Clean, modern landing page with hero section and featured products"
+      description: "Clean, modern login page"
     },
     {
       id: 2,
       url: "/currentWork/2.png",
       title: "Employees Ar",
-      description: "Responsive grid layout with advanced filtering and search"
+      description: "Responsive grid layout with advanced filtering and search."
     },
     {
       id: 3,
       url: "/currentWork/3.png",
       title: "Managers",
-      description: "Comprehensive analytics and management interface"
+      description: "Responsive grid layout with advanced filtering and search."
     },
     {
       id: 4,
       url: "/currentWork/4.png",
       title: "Admin Logs",
-      description: "Real-time sales data and performance metrics"
+      description: "Monitoring users actions during the day."
     },
     {
       id: 5,
       url: "/currentWork/5.png",
       title: "Manage Teams",
-      description: "Fully responsive design optimized for mobile devices"
+      description: "Create, update, delete, manage teams"
     },
     {
       id: 6,
       url: "/currentWork/6.png",
       title: "Create Team Ar",
-      description: "Secure checkout process with multiple payment options"
+      description: "Creating team options"
     }
   ]
 };
